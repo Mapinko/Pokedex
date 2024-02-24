@@ -4,9 +4,13 @@ interface MainRegion {
     name: string;
     url: string;
 }
+interface Abilities {
+    name: string;
+    url: string;
+}
 
 interface Generation {
-    abilities: string[];
+    abilities: Abilities[];
     id: number;
     main_region: MainRegion;
     moves: string[];
@@ -34,21 +38,21 @@ const GenerationsList: React.FC<GenerationsListProps> = ({ generationURL }) => {
 
         fetchGeneration();
     }, []);
-                
-console.log(generation);
 
-return (
-    <div>
-        {generation && (
-            <ul>
-                <li>Main Region: {generation.main_region['name']}</li> 
-                {/* {generation.abilities.length > 0 && (
-                    <li>Abilities: {generation.abilities}</li>
-                )} */}
-            </ul>
-        )}
-    </div>
-);
+    console.log('Generation List:', generation);
+
+    return (
+        <div>
+                <ul>
+                    <li>Main Region: {generation?.main_region.name}</li>
+                    {generation?.abilities && generation.abilities.length > 0 && (
+                        <li>Abilities: {
+                            generation.abilities.map(ability => ability.name).join(', ')
+                        }</li>
+                    )}
+                </ul>
+        </div>
+    );
 };
 
 export default GenerationsList;

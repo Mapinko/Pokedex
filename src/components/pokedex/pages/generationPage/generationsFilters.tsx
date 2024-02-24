@@ -42,7 +42,7 @@ const GenerationsFilters = () => {
 
                         {selectedGenerationIndex === index && (
                             <GenerationsList key={generation.name} generationURL={generation.url} />
-                            )}
+                        )}
                     </div>
                     ))}
             </section>
