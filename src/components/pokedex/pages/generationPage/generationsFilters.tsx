@@ -31,18 +31,21 @@ const GenerationsFilters = () => {
         <div>
             <h2>Choose the Generation</h2>
 
+            <section >
             {generations.map((generation: { name: string; url: string }, index: number) => (
-                <div key={generation.name}>
-                    <button onClick={() => handleGenerationClick(index)}>
-                    <ul>
-                        <li>{generation.name}</li>
-                    </ul>
-                    </button>
-                    {selectedGenerationIndex === index && (
-                        <GenerationsList key={generation.name} generationURL={generation.url} />
-                    )}
-                </div>
-            ))}
+                    <div key={generation.name}>
+                        <button onClick={() => handleGenerationClick(index)}>
+                        <ul>
+                            <li>{generation.name}</li>
+                        </ul>
+                        </button>
+
+                        {selectedGenerationIndex === index && (
+                            <GenerationsList key={generation.name} generationURL={generation.url} />
+                            )}
+                    </div>
+                    ))}
+            </section>
         </div>
     );
 };

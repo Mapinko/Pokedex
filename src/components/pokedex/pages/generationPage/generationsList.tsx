@@ -42,10 +42,9 @@ return (
         {generation && (
             <ul>
                 <li>Main Region: {generation.main_region['name']}</li> 
-                {generation.abilities.length > 0 && (
+                {/* {generation.abilities.length > 0 && (
                     <li>Abilities: {generation.abilities}</li>
-                )}
-                {/* Add more properties as needed */}
+                )} */}
             </ul>
         )}
     </div>
