@@ -1,12 +1,12 @@
 import Header from "./components/header"
-import PokeHeaderNav from "./components/pokedex/pokeHeader"
+import PokeNav from './components/pokedex/pokeNav'
 
 function App() {
 
   return (
     <>
       <Header />
-      <PokeHeaderNav />
+      <PokeNav />
     </>
   )
 }

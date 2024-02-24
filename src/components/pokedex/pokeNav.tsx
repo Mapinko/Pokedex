@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import GenerationsFilters from './pages/generationPage/generationsFilters';
+import React, { useState } from 'react'
+import GenerationsFilters from './pages/generationPage/generationsFilters'
 
-const PokeHeaderNav: React.FC = () => {
+const PokeNav: React.FC = () => {
     const [showGenerationsFilters, setShowGenerationsFilters] = useState(false);
 
     const handleGenerationsClick = () => {
@@ -9,14 +9,16 @@ const PokeHeaderNav: React.FC = () => {
     };
 
     return (
+        <>
         <nav>
             <button onClick={handleGenerationsClick}>Generations</button>
             <button>Pokedex</button>
             <button>Regions</button>
+        </nav>
 
             {showGenerationsFilters && <GenerationsFilters />}
-        </nav>
+        </>
     );
 };
 
-export default PokeHeaderNav;
+export default PokeNav;
