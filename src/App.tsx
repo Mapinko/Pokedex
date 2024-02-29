@@ -1,5 +1,5 @@
-import Header from "./components/Header/index"
-import PokeNav from './components/pokedex/pokeNav'
+import Header from "./components/Header"
+import PokeNav from './components/pokedex/Navegation'
 
 function App() {
 
