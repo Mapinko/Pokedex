@@ -1,4 +1,4 @@
-import styled, { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from 'styled-components'
 
 export const GlobalStyle = createGlobalStyle`
     * {
@@ -9,7 +9,7 @@ export const GlobalStyle = createGlobalStyle`
 
 
     body {
-        background: linear-gradient(135deg, #FF5151, #B30000);
+        //background: linear-gradient(135deg, #FF5151, #B30000);
 
         scroll-behavior: smooth;
     }
